@@ -1,3 +1,17 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+/category_books_page/__pycache__/
+/category_clothings_page/__pycache__/
+/category_electronics_page/__pycache__/
+/category_housings_page/__pycache__/
+/category_musical_instruments_page/__pycache__/
+/category_sports_page/__pycache__/
+/category_stationaries_page/__pycache__/
+/category_tickets_page/__pycache__/
+/config/__pycache__/
+/default_page/__pycache__/
+/login_page/__pycache__/
+/main_page/__pycache__/
+/signup_page/__pycache__/
+
