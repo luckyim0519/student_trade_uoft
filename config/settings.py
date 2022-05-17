@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     #manually created app
-    'start_page',
+    'default_page',
     'login_page',
     'signup_page',
     'main_page',
