@@ -3,5 +3,38 @@ body{
     background: url("/static/images/uoft_watermark.png") no-repeat;
     background-position: center center;
     background-origin: content-box;
-    background-size: 50% ;
+    background-size: 30% ;
+}
+
+footer {
+  padding: 1rem;
+  background: #e3f2fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.foot-name{
+    padding: 1rem;
+}
+
+.social-icons{
+    display: flex;
+}
+
+.social-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    margin: 0 0.5rem;
+}
+
+.social-icon--instagram{
+    color: white;
+}
+
+.social-icon--linkedin{
+    color: white;
 }
