@@ -5,13 +5,16 @@ body{
     background-origin: content-box;
     background-size: 30% ;
 }
+.sidebar-category{
+    font-family: 'Oxygen', sans-serif;
+}
 
 footer {
-  padding: 1rem;
-  background: #e3f2fd;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    padding: 1rem;
+    background: #e3f2fd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .foot-name{
