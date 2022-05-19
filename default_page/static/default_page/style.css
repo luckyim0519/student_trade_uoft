@@ -1,0 +1,7 @@
+
+body{
+    background: url("/static/images/uoft_watermark.png") no-repeat;
+    background-position: center center;
+    background-origin: content-box;
+    background-size: 50% ;
+}
