@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-
 def home_views(request):
     return render(request, 'index.html')
 
@@ -28,3 +27,9 @@ def category_stationaries_page_views(request):
 
 def category_tickets_page_views(request):
     return render(request, 'category_tickets_page/index.html')
+
+def login_page_views(request):
+    return render(request, 'login_page/index.html')
+
+def signup_views(request):
+    return render(request, 'signup_page/index.html')

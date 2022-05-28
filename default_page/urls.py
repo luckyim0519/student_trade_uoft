@@ -12,4 +12,6 @@ urlpatterns = [
     path('category_sports_page', views.category_sports_page_views, name ="category_sports_page"),
     path('category_stationaries_page', views.category_stationaries_page_views, name ="category_stationaries_page"),
     path('category_tickets_page', views.category_tickets_page_views, name ="category_tickets_page"),
+    path('login_page', views.login_page_views, name='login_page'),
+    path('signup_page', views.signup_views, name='signup_page'),
 ]

@@ -46,6 +46,19 @@ body{
 
 }
 
+.login-signup-box{
+    position: absolute;
+    top:50px;
+    right:20px;
+    margin: 20px;
+}
+
+.login-signup-box ul li{
+    list-style-type: none;
+    float: left;
+    margin-left: 20px;
+}
+
 footer {
     height:20%;
     padding: 1rem;
