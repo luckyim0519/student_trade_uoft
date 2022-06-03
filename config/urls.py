@@ -14,14 +14,34 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
-from login_page import views
 
+from django.urls import path, include
+from django.contrib.auth.models import User
+from rest_framework import routers, serializers, viewsets
+
+from login_page import views
+from signup_page import views
+# Serializers define the API representation.
+class UserSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = User
+        fields = ['url', 'username', 'email', 'is_staff']
+
+
+# ViewSets define the view behavior.
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+
+# Routers provide an easy way of automatically determining the URL conf.
+router = routers.DefaultRouter()
+router.register(r'users', UserViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('default_page.urls')),
-    path('login_page/', views.login),
-    path('signup_page/', include('signup_page.urls')),
+    path('login_page/', include('login_page.urls')),
+    path('signup_page/', views.signup_list),
     #path('signup_page/', signaction),
     #path('login_page/', loginaction),
     path('main_page/', include('main_page.urls')),
@@ -33,5 +53,5 @@ urlpatterns = [
     path('category_electronics_page/', include('category_housings_page.urls')),
     path('category_clothings_page/', include('category_clothings_page.urls')),
     path('category_books_page/', include('category_books_page.urls')),
-    path('api-auth/', include('rest_framework.urls')),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
