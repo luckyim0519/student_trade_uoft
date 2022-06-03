@@ -15,12 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from login_page import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('default_page.urls')),
-    path('login_page/', include('login_page.urls')),
+    path('login_page/', views.login),
     path('signup_page/', include('signup_page.urls')),
+    #path('signup_page/', signaction),
+    #path('login_page/', loginaction),
     path('main_page/', include('main_page.urls')),
     path('category_tickets_page/', include('category_tickets_page.urls')),
     path('category_stationaries_page/', include('category_stationaries_page.urls')),
@@ -30,4 +33,5 @@ urlpatterns = [
     path('category_electronics_page/', include('category_housings_page.urls')),
     path('category_clothings_page/', include('category_clothings_page.urls')),
     path('category_books_page/', include('category_books_page.urls')),
+    path('api-auth/', include('rest_framework.urls')),
 ]
