@@ -67,6 +67,5 @@ def login(request):
         else:
             print("login failed")
             return HttpResponse(status=401)
-
     return render(request, 'signup_page/index.html')
 

@@ -44,7 +44,7 @@ urlpatterns = [
     path('', include('default_page.urls')),
     path('login_page/', include('login_page.urls')),
     path('signup_page/', views.signup_list),
-    path('signup_page/<int:pk>/', views.signup_detail),
+    path('signup_page/<str:pk>/', views.signup_detail),
     #path('signup_page/', signaction),
     #path('login_page/', loginaction),
     path('main_page/', include('main_page.urls')),
