@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>UTST Login</title>
     <meta charset="utf-8">
@@ -11,19 +10,46 @@
 </head>
 
 <body>
-<form class="form-signin" method="POST" action="/login_page/">
-    <h1 class="h3 mb-3 font-weight-normal">로그인</h1>
-    <label for="inputId" class="sr-only">ID</label>
-    <input type="text" id="user-email" name="user-email" class="form-control" placeholder="ID" autofocus=""/>
-    <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" id="user-pwd" name="user-pwd" class="form-control" placeholder="Password"/>
-    <div class="checkbox mb-3">
-        <label>
-            <input type="checkbox" value="remember-me"> Remember me
-        </label>
+    <div class="container-login100">
+        <div class="wrap-login100">
+            <form class="login100-form" method="POST" action="/login_page/">
+                <span class="login100-form-title p-b-10">
+                    <img src="{% static 'images/Utoronto_coa.svg.png' %}" width="200px" height="200px">
+                </span>
+                <h1 class="h3 mb-3 font-weight-normal p-b-26">Log In</h1>
+                <div class="wrap-input100 validate-input" data-validate="Valid email is: yourID@UofT.ca">
+                    <label for="inputId" class="sr-only">ID</label>
+                    <input class="input100" type="text" id="user-email" name="user-email" class="form-control" placeholder="ID" autofocus=""/>
+                    <span class="focus-input100" data-placeholder="Email">
+<!--                    ::before-->
+<!--                    ::after-->
+                    </span>
+                </div>
+                <div class="wrap-input100 validate-input" data-validate="Valid email is: yourID@UofT.ca">
+                    <label for="inputPassword" class="sr-only">Password</label>
+                <input class="input100" type="password" id="user-pwd" name="user-pwd" class="form-control" placeholder="Password"/>
+                    <span class="focus-input100" data-placeholder="Password">
+<!--                    ::before-->
+<!--                    ::after-->
+                    </span>
+                </div>
+                <div class="checkbox mb-3">
+                    <label>
+                        <input class="input-checkbox" type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>
+                <div class="icon-button">
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Log In</button>
+                </div>
+
+                <div class="text-center p-t-100">
+                    <span class="txt-message"> Don't have an account? </span>
+                    <a class="txt-link" href="#">Sign Up</a>
+                </div>
+
+            </form>
+        </div>
     </div>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">로그인</button>
-</form>
 
 </body>
 </html>
