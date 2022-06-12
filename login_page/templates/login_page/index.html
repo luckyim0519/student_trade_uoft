@@ -27,7 +27,7 @@
                 </div>
                 <div class="wrap-input100 validate-input" data-validate="Valid email is: yourID@UofT.ca">
                     <label for="inputPassword" class="sr-only">Password</label>
-                <input class="input100" type="password" id="user-pwd" name="user-pwd" class="form-control" placeholder="Password"/>
+                    <input class="input100" type="password" id="user-pwd" name="user-pwd" class="form-control" placeholder="Password"/>
                     <span class="focus-input100" data-placeholder="Password">
 <!--                    ::before-->
 <!--                    ::after-->
@@ -39,17 +39,14 @@
                     </label>
                 </div>
                 <div class="icon-button">
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Log In</button>
+                <button class="btn" type="submit">Log In</button>
                 </div>
-
                 <div class="text-center p-t-100">
                     <span class="txt-message"> Don't have an account? </span>
-                    <a class="txt-link" href="#">Sign Up</a>
+                    <a class="txt-link" href="{% url 'signup_page' %}">Sign Up</a>
                 </div>
-
             </form>
         </div>
     </div>
-
 </body>
 </html>

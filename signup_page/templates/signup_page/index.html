@@ -6,34 +6,41 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="{% static '/signup_page/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/signup_page/css/style.css ' %}">
     <!-- Bootstrap CSS -->
     <script src="https://kit.fontawesome.com/1c2c2462bf.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-<div class="container">
-    <form class="form-horizontal" id="validateForm">
-        <h1>Welcome To UTST</h1>
+<div class="container-signup100">
+    <div class="wrap-signup">
+            <form class="form-horizontal" id="validateForm">
+        <h1 class="h1-title p-b-26">Welcome To UTST</h1>
         <fieldset>
-            <form method="POST">
+            <form method="POST" action="">
+                {% csrf_token %}
                 <div class="sign-up-field">
-                    <label for="username-label"><b>Username: </b></label>
-                    <input type="text" placeholder="Enter your preferred name" name="username" required><br>
-                    <label for="email"><b>UofT email: </b></label>
-                    <input type="email" placeholder="Enter your UofT email" name="email" required><br>
-                    <label for="password"><b>password: </b></label>
-                    <input type="password" placeholder="Enter the password" name="password" required><br>
-                    <label for="password"><b>password check: </b></label>
-                    <input type="password" placeholder="Enter the password again" name="password" required>
+<!--                    <label for="username-label"><b>Username: </b></label>-->
+                    <input class="input100" type="text" placeholder="Enter your preferred UserName" name="username" required><br>
+<!--                    <label for="email"><b>UofT email: </b></label>-->
+                    <input class="input100" type="email" placeholder="Enter your UofT email" name="email" required><br>
+<!--                    <label for="password"><b>password: </b></label>-->
+                    <input class="input100" type="password" placeholder="Enter the password" name="password" required><br>
+<!--                    <label for="password"><b>password check: </b></label>-->
+                    <input class="input100 m-b-30" type="password" placeholder="Enter the password again" name="password" required style="margin-bottom: 25px">
                 </div>
-                <button type="submit"><b>Sign up</b></button>
-                <p>Already have an account?<a href="{% url 'login_page' %}">Log in</a></p>
+                <button type="submit"><b>Create My Account</b></button>
+
+
+                <p class="signup-message">Already have an account?<a href="{% url 'login_page' %}" style="margin-left: 10px">Log in</a></p>
             </form>
             <!-- TEST -->
 
         </fieldset>
     </form>
+
+    </div>
+
 </div>
 
 </body>
