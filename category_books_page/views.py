@@ -1,5 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from .forms import *
+from .models import *
+
 
 # Create your views here.
-def home_views(request):
-    return render(request, 'category_books_page/index.html')
+
+def post(request):
+    if request.method == 'POST':
+        return render(request, 'index.html', {'POST': 'SUCCESS POST'})
+    if request.method == 'GET':
+        return render(request, 'index.html', {'GET': 'SUCCESS GET'})

@@ -13,10 +13,6 @@ DEBUG = config("DEBUG", cast=bool, default=True)
 
 ALLOWED_HOSTS = []
 
-# Application definition
-
-
-
 INSTALLED_APPS = [
     #manually created app
     'default_page',
