@@ -1,12 +1,9 @@
 from django.shortcuts import render,redirect
-from .forms import *
-from .models import *
+from .models import BookBoardModel
 
 
-# Create your views here.
+def index(request):
+    all_books = BookBoardModel.objects.all()
 
-def post(request):
-    if request.method == 'POST':
-        return render(request, 'index.html', {'POST': 'SUCCESS POST'})
-    if request.method == 'GET':
-        return render(request, 'index.html', {'GET': 'SUCCESS GET'})
+    context = {'all_books': all_books}
+    return render(request, 'category_books_page/index.html', context)

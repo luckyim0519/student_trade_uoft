@@ -1,21 +1,4 @@
-{% block content %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <h1>BOOKS PAGE</h1>
-    <form method="GET">
-        <button class="btn-get">GET</button>
-    </form>
-    <form method="POST">
-        {% csrf_token %}
-        <button class ="btn-post">POST</button>
-    </form>
-    <h2>{{GET}}</h2>
-    <h2>{{POST}}</h2>
-</body>
-</html>
-{% endblock content %}
+
+{% for book in all_books %}
+    {{ book.title }}
+{% endfor %}
