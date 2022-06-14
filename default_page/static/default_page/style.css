@@ -1,98 +1,106 @@
-*{
-    margin: 0px;
-    padding: 0px;
-}
+/**{*/
+/*    margin: 0px;*/
+/*    padding: 0px;*/
+/*}*/
 
-body{
-    background: url("/static/images/uoft_watermark.png") no-repeat;
-    background-position: center center;
-    background-origin: content-box;
-    background-size: 45% ;
-    font-family: 'Source Sans Pro', sans-serif;
+/*.topbar {*/
+/*  position: fixed;*/
+/*  top: 0;*/
+/*  !* width: 100% *!*/
+/*  left: 0;*/
+/*  right: 0;*/
+/*}*/
 
-}
+/*body{*/
+/*    background: url("/static/images/uoft_watermark.png") no-repeat;*/
+/*    background-position: center center;*/
+/*    background-origin: content-box;*/
+/*    background-size: 45% ;*/
+/*    font-family: 'Source Sans Pro', sans-serif;*/
 
- .sidebar{
-    font-family: 'Oxygen', sans-serif;
-    position: fixed;
-    width: 25%;
-    height: 100%;
-    background-color: #002554;
-    padding: 30px 0;
+/*}*/
 
-}
+/* .sidebar{*/
+/*    font-family: 'Oxygen', sans-serif;*/
+/*    position: fixed;*/
+/*    width: 25%;*/
+/*    height: 100%;*/
+/*    background-color: #002554;*/
+/*    padding: 30px 0;*/
 
-.sidebar h4{
-    color: white;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 30px;
-}
+/*}*/
 
-.sidebar li{
-    padding: 15px;
-    border-bottom: 1px solid;
-    border-bottom-width: 30%;
-    border-bottom-color:#e3f2fd;
-    border-top: 1px solid;
-    font-size: 15px;
-    text-align: center;
-}
+/*.sidebar h4{*/
+/*    color: white;*/
+/*    text-transform: uppercase;*/
+/*    text-align: center;*/
+/*    margin-bottom: 30px;*/
+/*}*/
 
-.toggle-btn{
-    position: absolute;
-    left:120%
-    top: 15px;
+/*.sidebar li{*/
+/*    padding: 15px;*/
+/*    border-bottom: 1px solid;*/
+/*    border-bottom-width: 30%;*/
+/*    border-bottom-color:#e3f2fd;*/
+/*    border-top: 1px solid;*/
+/*    font-size: 15px;*/
+/*    text-align: center;*/
+/*}*/
 
-}
+/*.toggle-btn{*/
+/*    position: absolute;*/
+/*    left:120%*/
+/*    top: 15px;*/
 
-.login-signup-box{
-    position: absolute;
-    top:50px;
-    right:20px;
-    margin: 20px;
-}
+/*}*/
 
-.login-signup-box ul li{
-    list-style-type: none;
-    float: left;
-    margin-left: 20px;
-}
+/*.login-signup-box{*/
+/*    position: absolute;*/
+/*    top:50px;*/
+/*    right:20px;*/
+/*    margin: 20px;*/
+/*}*/
 
-footer {
-    height:20%;
-    padding: 1rem;
-    background: #e3f2fd;
-    display: flex;
-    position: center;
-    align-items: center;
-    justify-content: center;
-}
+/*.login-signup-box ul li{*/
+/*    list-style-type: none;*/
+/*    float: left;*/
+/*    margin-left: 20px;*/
+/*}*/
 
-.foot-name{
-    padding: 1rem;
-}
-footer h6{
-    text-color: white;
-}
+/*footer {*/
+/*    height:20%;*/
+/*    padding: 1rem;*/
+/*    background: #e3f2fd;*/
+/*    display: flex;*/
+/*    position: center;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
 
-.social-icons{
-    display: flex;
-}
+/*.foot-name{*/
+/*    padding: 1rem;*/
+/*}*/
+/*footer h6{*/
+/*    text-color: white;*/
+/*}*/
 
-.social-icon{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    cursor: pointer;
-    margin: 0 0.5rem;
-}
+/*.social-icons{*/
+/*    display: flex;*/
+/*}*/
 
-.social-icon--instagram{
-    color: white;
-}
+/*.social-icon{*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    position: relative;*/
+/*    cursor: pointer;*/
+/*    margin: 0 0.5rem;*/
+/*}*/
 
-.social-icon--linkedin{
-    color: white;
-}
+/*.social-icon--instagram{*/
+/*    color: white;*/
+/*}*/
+
+/*.social-icon--linkedin{*/
+/*    color: white;*/
+/*}*/
