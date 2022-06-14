@@ -1,0 +1,151 @@
+/** {*/
+/*    margin: 0px;*/
+/*    padding: 0px;*/
+/*}*/
+
+/* Default Layout */
+
+html{
+  background-color :rgb(255, 255, 255);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vmax;
+}
+
+body {
+    background: url("/static/images/uoft_watermark.png") no-repeat;
+    background-position: center center;
+    background-origin: content-box;
+    background-size: 45%;
+    height: 80vmax;
+    width: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+.uoft-footer {
+    height: 10vh;
+    padding: 1rem;
+    background: #e3f2fd;
+    display: flex;
+    /*position: center;*/
+    align-items: center;
+    justify-content: center;
+}
+.topbar {
+    position: fixed;
+    height: 100px;
+    width: 100vw;
+    /*top: 0;*/
+    /* width: 100% */
+    /*left: 0;*/
+    /*right: 0;*/
+}
+
+.content{
+    margin-top : 10%;
+    height: 70vh;
+    width: 100vw;
+
+}
+
+.navbar {
+    background-color: #e3f2fd;
+
+}
+
+.sidebar {
+    font-family: 'Oxygen', sans-serif;
+    position: fixed;
+    margin-top: 50px;
+    width: 25vw;
+    min-width: 220px;
+    height: 100vh;
+    background-color: #002554;
+    padding: 30px 0;
+
+}
+
+#wrapper{
+    height:auto;
+    min-height: 100%;
+    padding-bottom: 10vh;
+}
+footer{
+    height: 10vh;
+    position: relative;
+    transform: translateY(-100%);
+}
+
+/* Default Layout */
+
+
+.sidebar h4 {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar li {
+    padding: 15px;
+    border-bottom: 1px solid;
+    border-bottom-width: 30%;
+    border-bottom-color: #e3f2fd;
+    border-top: 1px solid;
+    font-size: 15px;
+    text-align: center;
+}
+
+.toggle-btn {
+    position: absolute;
+    /*left: 12%;*/
+    top: 15px;
+
+}
+
+.login-signup-box {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    margin: 20px;
+}
+
+.login-signup-box ul li {
+    list-style-type: none;
+    float: left;
+    margin-left: 20px;
+}
+
+
+
+.foot-name {
+    padding: 1rem;
+}
+
+footer h6 {
+    text-color: white;
+}
+
+.social-icons {
+    display: flex;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    margin: 0 0.5rem;
+}
+
+.social-icon--instagram {
+    color: white;
+}
+
+.social-icon--linkedin {
+    color: white;
+}
+

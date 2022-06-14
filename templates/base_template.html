@@ -1,14 +1,27 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+<head>
 
-<div class="sticky-nav-bar">
-    Testing django template extension
+ {% include 'head.html' %}
+</head>
+<body>
 
-    Be careful to add {% extends 'base-template.html' %} in the first tag,
-    where you want to add.
-    But this base template acts as the inheritance....
-    so be careful how to choose this.
+ {% include 'header.html' %}
 
+ {% include 'sidebar.html' %}
+
+<div id="content">
+    {% block content %}
+
+
+    {% endblock content %} <!--Content Space-->
+    <!--If we want to use this block content, we have to use views.py-->
 </div>
+</body>
+
+<div id="wrapper"> <!--Empty space for set footer layout-->
+</div>
+{% include 'footer.html' %}
 </html>
+
