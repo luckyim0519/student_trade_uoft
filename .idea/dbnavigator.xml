@@ -45,6 +45,7 @@
       </filter>
     </filter-actions>
     <filter-actions connection-id="42510e82-634e-4eee-a71c-43206541fe7b" dataset="main.sqlite_sequence" active-filter-id="" />
+    <filter-actions connection-id="42510e82-634e-4eee-a71c-43206541fe7b" dataset="main.category_books_page_bookboardmodel" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
