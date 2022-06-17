@@ -1,7 +1,7 @@
-#from django import forms
-#from .models import BookBoardModel
+from django import forms
+from .models import BookBoardModel
 
-#class BookBoardForm(forms.ModelForm):
-#    class Meta:
-#        model = BookBoardModel
-#        fields =['title', 'content', 'writer']
+class BookBoardForm(forms.ModelForm):
+    class Meta:
+        model = BookBoardModel
+        fields =['title', 'content', 'writer']

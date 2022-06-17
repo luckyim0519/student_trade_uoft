@@ -14,3 +14,6 @@ class BookBoardModel(models.Model):
 
     def summary(self):
         return self.content[:100]
+
+    def publish(self):
+        self.save()

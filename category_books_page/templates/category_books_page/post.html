@@ -1,12 +1,7 @@
 <div class="container">
-    <form action="">
-        <h4> title :</h4>
-        <input type="text">
-        <br><br>
-        <h4>content: </h4>
-        <textarea name="content" cols="40" row="10">
-        </textarea>
-        <br><br>
+    <form method="POST">
+        {% csrf_token %}
+        {{postform}}
         <input class="btn-post" type="submit" value="post">
     </form>
 
