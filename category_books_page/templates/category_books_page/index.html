@@ -1,6 +1,6 @@
 {% for book in all_books %}
    <h1>{{ book.title }}</h1>
-   <p>{{book.content}}<a href="/detail/{{book.id}}">...more</a></p>
+   <p>{{book.content}}<a href="{% url 'detail' book.id %}">...more</a></p>
    <p>{{book.writer}}</p>
 
    <br>
