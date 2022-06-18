@@ -40,13 +40,10 @@ router.register(r'users', UserViewSet)
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    #urls to apps
     path('', include('default_page.urls')),
     path('login_page/', include('login_page.urls')),
-    path('signup_page/', views.signup_list),
-    path('signup_page/<str:pk>/', views.signup_detail),
-    #path('signup_page/', signaction),
-    #path('login_page/', loginaction),
+    path('signup_page/', include('signup_page.urls')),
     path('main_page/', include('main_page.urls')),
     path('category_tickets_page/', include('category_tickets_page.urls')),
     path('category_stationaries_page/', include('category_stationaries_page.urls')),
@@ -56,5 +53,9 @@ urlpatterns = [
     path('category_electronics_page/', include('category_housings_page.urls')),
     path('category_clothings_page/', include('category_clothings_page.urls')),
     path('category_books_page/', include('category_books_page.urls')),
+
+    #admin page
+    path('admin/', admin.site.urls),
+    #restful api page
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
