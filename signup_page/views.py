@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate
+from django.contrib import auth
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 from .models import signupModel
@@ -13,4 +13,14 @@ def signup_pageHome(request):
 
 def login_page(request):
     return render(request, 'login_page/index.html')
+
+
+def signup(request):
+    if request.method == 'POST':
+        if request.POST['password'] == request.POST['passwordCheck']:
+            user = signupModel.create_user(email=request.POST["email"] , password=request.POST["password"])
+            auth.login(request,user)
+        return redirect('/login_page/')
+    #when it fails to sign in
+    return render(request, 'signup_page/index.html')
 
