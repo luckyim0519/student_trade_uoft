@@ -23,10 +23,12 @@ INSTALLED_APPS = [
     'category_stationaries_page',
     'category_sports_page',
     'category_musical_instruments_page',
-    'category_housings_page',
+    'category_home_appliances_page',
     'category_electronics_page',
     'category_clothings_page',
     'category_books_page',
+    'category_furniture_page',
+    'category_housings_page',
 
     'django.contrib.admin',
     'django.contrib.auth',

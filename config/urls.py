@@ -49,10 +49,11 @@ urlpatterns = [
     path('category_stationaries_page/', include('category_stationaries_page.urls')),
     path('category_sports_page/', include('category_sports_page.urls')),
     path('category_musical_instruments_page/', include('category_musical_instruments_page.urls')),
-    path('category_housings_page/', include('category_housings_page.urls')),
-    path('category_electronics_page/', include('category_housings_page.urls')),
+    path('category_home_appliances_page/', include('category_home_appliances_page.urls')),
+    path('category_electronics_page/', include('category_electronics_page.urls')),
     path('category_clothings_page/', include('category_clothings_page.urls')),
     path('category_books_page/', include('category_books_page.urls')),
+    path('category_furniture_page/', include('category_furniture_page.urls')),
 
     #admin page
     path('admin/', admin.site.urls),

@@ -28,6 +28,12 @@ def category_stationaries_page_views(request):
 def category_tickets_page_views(request):
     return render(request, 'category_tickets_page/index.html')
 
+def category_furniture_page_views(request):
+    return render(request, 'category_furniture_page/index.html')
+
+def category_home_appliances_page_views(request):
+    return render(request, 'category_home_appliances_page/index.html')
+
 def login_page_views(request):
     return render(request, 'login_page/index.html')
 
