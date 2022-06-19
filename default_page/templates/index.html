@@ -2,11 +2,20 @@
 {% extends 'base_template.html' %}
 
 {% block content %}
-  <h1>만나서 반가워~</h1>
-  <h1>만나서 반가워~</h1>
-  <h1>만나서 반가워~</h1>
-  <h1>만나서 반가워~</h1>
-  <p>Test</p>
+
+<div class="wrap-searchbar">
+    <form class="form-inline" id="default-searchbar">
+      <input class="form control mr-xl-2" type="search" placeholder="Search Item" aria-label="Search">
+      <button class="btn btn-sm btn-outline-secondary" type="button">Search</button>
+  </form>
+</div>
+
+
+<script>
+<!--Disable Searchbar on Default Page-->
+  document.getElementById("top-search").style.display='none'
+
+</script>
 
 {% endblock %}
 
