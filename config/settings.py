@@ -39,6 +39,9 @@ INSTALLED_APPS = [
 
     #RESTAPI
     'rest_framework',
+
+    #Installed MathFilter for allocate posts
+    'mathfilters',
 ]
 
 MIDDLEWARE = [

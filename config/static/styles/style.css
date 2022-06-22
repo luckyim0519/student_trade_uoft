@@ -33,7 +33,7 @@ body {
     display: flex;
     width: 100%;
     align-items: stretch;
-    /*z-index: 1;*/
+
 }
 
 
@@ -172,6 +172,35 @@ aside{
   color:#fff;
 }
 
+/*Page Overview Style*/
+.post-overview-odd{
+    padding: 10px;
+    background-color: transparent;
+    width: 30%;
+    border: 1px solid red;
+    margin-bottom: 10px;
+}
+
+.post-overview-even{
+    padding: 10px;
+    background-color: transparent;
+    width: 30%;
+    border: 1px solid blue;
+    margin-bottom: 10px;
+    position: relative;
+    transform: translateY(50%);
+}
+
+.vertical-line{
+  border-left: 3px solid black;
+  height: 80%;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 112px;
+    z-index: 0;
+}
+
 .wrap-searchbar{
   position:relative;
   height:200px;
@@ -197,7 +226,7 @@ aside{
     position: fixed;
     height: 112px;
     width: 100%;
-
+    z-index: 10;
 }
 
 .p-t-10{

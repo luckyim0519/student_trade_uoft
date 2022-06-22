@@ -1,12 +1,52 @@
+
+
+{% extends 'base_template.html' %}
+{% load mathfilters %}
+
+
+
+{% block content %}
+
+
+
 {% for book in all_books %}
+
+<div class="vertical-line"></div>
+
+{% if book|divisibleby:2 == 0 %}
+<!--For Even Numbers-->
+<div class="post-overview-even">
    <h1>{{ book.title }}</h1>
    <p>{{book.content}}<a href="{% url 'detail' book.id %}">...more</a></p>
    <p>{{book.writer}}</p>
-
    <br>
+</div>
+
+
+{% else %}
+<!--For Odd Numbers-->
+<div class="post-overview-odd">
+   <h1>{{ book.title }}</h1>
+   <p>{{book.content}}<a href="{% url 'detail' book.id %}">...more</a></p>
+   <p>{{book.writer}}</p>
+   <br>
+</div>
+
+{% endif %}
+
+
+
 {% endfor %}
 
 
 <a href="{% url 'post' %}">
 <input type="button" value="post your book" />
 </a>
+
+<script>
+    <!--Disable Searchbar on Default Page-->
+    // document.getElementById("top-search").style.display = 'none'
+
+</script>
+
+{% endblock %}
