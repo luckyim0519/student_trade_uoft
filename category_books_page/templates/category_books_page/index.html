@@ -7,15 +7,18 @@
 
 {% block content %}
 
-
+<!--<div class="vertical-line"></div>-->
 
 {% for book in all_books %}
 
-<div class="vertical-line"></div>
 
-{% if book|divisibleby:2 == 0 %}
-<!--For Even Numbers-->
-<div class="post-overview-even">
+
+
+
+{% if forloop.counter|divisibleby:2 == 0 %}
+
+<div class="post-overview-odd">
+   {{ forloop.counter  }}번글: {{ book.title }} - {{ post.title }}
    <h1>{{ book.title }}</h1>
    <p>{{book.content}}<a href="{% url 'detail' book.id %}">...more</a></p>
    <p>{{book.writer}}</p>
@@ -24,14 +27,14 @@
 
 
 {% else %}
-<!--For Odd Numbers-->
-<div class="post-overview-odd">
+
+<div class="post-overview-even">
+   {{ forloop.counter  }}번글: {{ book.title }} - {{ post.title }}
    <h1>{{ book.title }}</h1>
    <p>{{book.content}}<a href="{% url 'detail' book.id %}">...more</a></p>
    <p>{{book.writer}}</p>
    <br>
 </div>
-
 {% endif %}
 
 

@@ -187,19 +187,19 @@ aside{
     width: 30%;
     border: 1px solid blue;
     margin-bottom: 10px;
-    position: relative;
-    transform: translateY(50%);
+    position: absolute;
+    transform: translateX(500px);
 }
 
-.vertical-line{
-  border-left: 3px solid black;
-  height: 80%;
-  position: absolute;
-  left: 50%;
-  margin-left: -3px;
-  top: 112px;
-    z-index: 0;
-}
+/*.vertical-line{*/
+/*  border-left: 3px solid black;*/
+/*  height: 80%;*/
+/*  position: absolute;*/
+/*  left: 50%;*/
+/*  margin-left: -3px;*/
+/*  top: 112px;*/
+/*    z-index: 0;*/
+/*}*/
 
 .wrap-searchbar{
   position:relative;
@@ -315,3 +315,7 @@ footer h6 {
     color: white;
 }
 
+.container-category{
+    display: grid;
+
+}
