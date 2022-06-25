@@ -6,12 +6,12 @@
 /* Default Layout */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
 
-html{
-  background-color :rgb(255, 255, 255);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
+html {
+    background-color: rgb(255, 255, 255);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
 }
 
 body {
@@ -19,63 +19,86 @@ body {
     background-position: center center;
     background-origin: content-box;
     background-size: 35%;
-
-    /*background-size: auto;*/
-
-    height: 80%;
-    width: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: none;
+    text-rendering: optimizeLegibility;
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+    min-height: 100%;
+    min-width: 280px;
+    /*width: 30%;*/
     font-family: 'Source Sans Pro', sans-serif;
 
 }
 
+
+header {
+    background: rgba(255,255,255,.95);
+    border: none;
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+    transition: background .5s;
+    border-bottom: 2px solid #ebebeb;
+}
+
+/*CSS Grid layout test*/
+
+.main-area {
+        /*margin-top: 56px;*/
+    padding: 56px 2rem 0 2rem;
+    display: grid;
+    /*grid-template-columns: repeat(2, minmax(50%, auto)) ;*/
+    /*grid-template-rows: repeat(2,minmax(40%, auto));*/
+    /*grid-auto-flow: row dense;*/
+    height: auto;
+    /*grid-auto-flow: column dense;*/
+    /*25px 185px 30px auto 30px 50px*/
+
+    grid-template-areas:
+        ' . . . '
+        '. main . '
+        ' . . . '
+        'footer footer footer';
+    max-width: 96%;
+
+    /*for fix footer*/
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
 /*For Sidebar*/
-.wrapper{
-    display: flex;
+.wrapper {
+    /*position: fixed;*/
+    display: grid;
     width: 100%;
     align-items: stretch;
+    z-index: 1;
+    padding-top: 112px;
 
 }
 
 
-#basement{
-    height:auto;
+#basement {
+    height: auto;
     min-height: 0%;
     padding-bottom: 10%;
 }
 
-footer{
-    height: 10%;
-    position: relative;
-    transform: translateY(-100%);
+footer {
+
+    /*height: 50px;*/
+    /*position: relative;*/
+    /*transform: translateY(-100%);*/
 }
 
 /*Searchbar Input for Default Page*/
-#searchbar-input-default{
+#searchbar-input-default {
     width: 80%;
-}
-
-/*For Mobile*/
-@media (max-width: 768px) {
-    #sidebar {
-        margin-left: 0;
-    }
-    #sidebar.active {
-        margin-left: -250px;
-    }
-
-    #searchbar-input-default {
-        width: 500px;
-    }
-
-}
-
-/*For Desktop*/
-@media (min-width: 1000px) {
-
-    #searchbar-input-default {
-        width: 800px;
-    }
-
 }
 
 p {
@@ -103,11 +126,98 @@ a[data-toggle="collapse"] {
     right: 20px;
     transform: translateY(-50%);
 }
+/* Default Category Style */
 
-aside{
-    z-index: 3;
+
+.container-category{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(50%, auto)) ;
+    grid-template-rows: repeat(2,minmax(25%, auto));
+    grid-auto-flow: row dense;
+    height: auto;
+
 }
 
+
+
+.item:nth-child(n){
+border: 1px solid blue;
+
+}
+
+/*.global-header {*/
+/*    height: 56px;*/
+/*    clear: both;*/
+/*    position: relative;*/
+/*    !*border-bottom: 2px solid rgba(50,50,40,0.5);*!*/
+/*    text-align: center;*/
+/*}*/
+
+/*FLoating Button*/
+
+/*플로팅 버튼 수정X========*/
+.floating-button {
+  display: flex;
+  position: fixed;
+  right: 30px;
+  bottom: 70px;
+  z-index: 999;
+}
+
+/*플로팅 버튼 아이콘 공용 스타일 수정X========*/
+.post-btn::before {
+   width: 100%;
+   height: 100%;
+   opacity: 1;
+   border-radius: 50%;
+   font-size: 1.15em;
+	color: #b67700;
+}
+
+/*플로팅 버튼 스타일========*/
+.span-post-button {
+  float: left;
+  display: flex;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  /*사용자 설정 파트*/
+  font-weight: 700;
+  background-color: #00000000;
+  border: 2px solid #b67700;
+}
+
+.global-footer {
+    grid-area: footer;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background: #e3f2fd;
+}
+
+.main-header {
+    background-color: #e3f2fd;
+    position: relative;
+    line-height: 0;
+    width: 100%;
+
+}
+
+
+/* Relates to Sidebar */
+aside {
+    /*padding-top: 112px;*/
+    margin-top: 112px;
+    position: fixed;
+    z-index: 5;
+}
 
 #sidebar {
     /*padding-top: 112px;*/
@@ -141,6 +251,7 @@ aside{
     font-size: 1.1em;
     display: block;
 }
+
 #sidebar ul li a:hover {
     color: #e3f2fd;
     background: #fff;
@@ -150,64 +261,34 @@ aside{
     color: #fff;
     background: #e3f2fd;
 }
+
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
     background: #FFFFFF;
 }
+
 /* Default Search Bar */
 
-aside{
-    margin-top: 112px;
-}
-
-.default-searchbar{
-  position:absolute;
-  /*top: 50%;*/
-  left: 25%;
-  margin-top:-25px;
-  margin-left:-50px;
-  width:75%;
-  height:50px;
-  color:#fff;
-}
-
-/*Page Overview Style*/
-.post-overview-odd{
-    padding: 10px;
-    background-color: transparent;
-    width: 30%;
-    border: 1px solid red;
-    margin-bottom: 10px;
-}
-
-.post-overview-even{
-    padding: 10px;
-    background-color: transparent;
-    width: 30%;
-    border: 1px solid blue;
-    margin-bottom: 10px;
+.default-searchbar {
     position: absolute;
-    transform: translateX(500px);
+    /*top: 50%;*/
+    left: 25%;
+    margin-top: -25px;
+    margin-left: -50px;
+    width: 75%;
+    height: 50px;
+    color: #fff;
 }
 
-/*.vertical-line{*/
-/*  border-left: 3px solid black;*/
-/*  height: 80%;*/
-/*  position: absolute;*/
-/*  left: 50%;*/
-/*  margin-left: -3px;*/
-/*  top: 112px;*/
-/*    z-index: 0;*/
-/*}*/
 
-.wrap-searchbar{
-  position:relative;
-  height:200px;
-  background:#fff;
+
+.wrap-searchbar {
+    position: relative;
+    height: 200px;
+    background: #fff;
 
 }
-
 
 
 /*---------*/
@@ -229,40 +310,15 @@ aside{
     z-index: 10;
 }
 
-.p-t-10{
+.p-t-10 {
     padding-top: 10px;
 }
 
-.p-r-10{
+.p-r-10 {
     padding-right: 5px;
 }
 
-.content-bar{
-    padding-top: 112px;
-    height: 70%;
-    width: 100%;
-}
 
-.navbar {
-    background-color: #e3f2fd;
-}
-
-.sidebar h4 {
-    color: white;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.sidebar li {
-    padding: 15px;
-    border-bottom: 1px solid;
-    border-bottom-width: 1px;
-    border-bottom-color: #e3f2fd;
-    border-top: 1px solid;
-    font-size: 15px;
-    text-align: center;
-}
 
 .toggle-btn {
     position: fixed;
@@ -285,7 +341,6 @@ aside{
 }
 
 
-
 .foot-name {
     padding: 1rem;
 }
@@ -297,6 +352,8 @@ footer h6 {
 .social-icons {
     display: flex;
 }
+
+
 
 .social-icon {
     display: flex;
@@ -315,7 +372,85 @@ footer h6 {
     color: white;
 }
 
-.container-category{
-    display: grid;
+
+
+
+/*For Mobile*/
+@media (max-width: 414px) {
+
+    #sidebar {
+        margin-left: 0;
+    }
+
+    #sidebar.active {
+        margin-left: -250px;
+    }
+
+    #searchbar-input-default {
+        width: 100%;
+    }
+
+    .main-header {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+    }
+
+    .container-category{
+    grid-template-columns: repeat(1, minmax(50%, auto)) ;
+    grid-template-rows: repeat(1,minmax(25%, auto));
+    grid-auto-flow: row;
+    height: auto;
+    }
+
+}
+
+
+
+/*For Tablet*/
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: 0;
+    }
+
+    #sidebar.active {
+        margin-left: -250px;
+    }
+
+    #searchbar-input-default {
+        width: 30%;
+    }
+
+    .main-header {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+    }
+
+}
+
+
+
+/*For Desktop*/
+@media (max-width: 1024px) {
+
+    /*.global-header {*/
+    /*    grid-area: header;*/
+    /*    display: grid;*/
+    /*}*/
+
+    #searchbar-input-default {
+        width: 800px;
+    }
+
+    .main-header {
+        align-items: end;
+    }
+
+    global-footer {
+        grid-area: footer;
+        align-self: center;
+        margin-top: 0;
+    }
 
 }

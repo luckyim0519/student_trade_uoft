@@ -9,24 +9,30 @@
 <body>
 
     {% include 'header.html' %}
-
-    <div class="wrapper">
+<!--    <div class="wrapper">-->
     <aside>
         {% include 'sidebar.html' %}
     </aside>
+<!--    <div class="container">-->
 
-    <div class="content-bar" id="content">
+<!--    <div class="content-bar" id="content">-->
+<div class="main-area">
+
     {% block content %}
 
 
     {% endblock content %} <!--Content Space-->
-    <!--If we want to use this block content, we have to use views.py-->
-    </div>
+
+
 
 </div>
+    <!--If we want to use this block content, we have to use views.py-->
+<!--    </div>-->
+
+<!--    </div>-->
 
 
-
+{% include 'footer.html' %}
 
 
 <!-- jQuery CDN - Slim version (=without AJAX) -->
@@ -53,9 +59,14 @@
 
 </script>
 
+
+
+<!--<div id="basement"> &lt;!&ndash;Empty space for set footer layout&ndash;&gt;-->
+<!--</div>-->
+
+
+
+
 </body>
 
-<div id="basement"> <!--Empty space for set footer layout-->
-</div>
-{% include 'footer.html' %}
 </html>
