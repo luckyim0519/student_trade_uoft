@@ -71,24 +71,6 @@ header {
     margin: 0 auto;
 }
 
-
-.post-title-input{
-
-
-    border: 1px solid #47748b;
-
-}
-
-.post-content-input{
-    border: 1px solid #47748b;
-}
-
-
-.post-writer-input{
-
-    border: 1px solid #8b4751;
-
-}
 /*For Sidebar*/
 .wrapper {
     /*position: fixed;*/
@@ -389,6 +371,7 @@ footer h6 {
 .social-icon--linkedin {
     color: white;
 }
+
 
 
 
