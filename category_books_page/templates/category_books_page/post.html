@@ -5,8 +5,14 @@
 <div class="container">
     <form method="POST">
         {% csrf_token %}
+
+
         {{postform}}
-        <input class="btn-post" type="submit" value="post">
+
+        <div class="lucky-im" style="padding-top: 30px;">
+            <input class="btn btn-primary btn-block" type="submit" value="post">
+        </div>
+<!--        <input class="btn-post" type="submit" value="post">-->
     </form>
 </div>
 
