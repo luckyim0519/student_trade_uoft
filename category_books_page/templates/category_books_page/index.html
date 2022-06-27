@@ -1,12 +1,47 @@
+
+
+{% extends 'base_template.html' %}
+{% load mathfilters %}
+
+
+
+{% block content %}
+
+<!--<div class="vertical-line"></div>-->
+<div class="container-category">
+
+
 {% for book in all_books %}
+
+
+<div class="item">
+   {{ forloop.counter  }}번글: {{ book.title }} - {{ post.title }}
    <h1>{{ book.title }}</h1>
    <p>{{book.content}}<a href="{% url 'detail' book.id %}">...more</a></p>
    <p>{{book.writer}}</p>
-
    <br>
+</div>
+
 {% endfor %}
 
 
-<a href="{% url 'post' %}">
-<input type="button" value="post your book" />
-</a>
+   <div class="item">
+
+   </div>
+
+   <div class="floating-button">
+      <a class="post-btn" href="{% url 'post' %}">
+      <input class="span-post-button" type="button" value="+"/>
+      </a>
+   </div>
+
+<script>
+    <!--Disable Searchbar on Default Page-->
+    // document.getElementById("top-search").style.display = 'none'
+
+</script>
+
+
+</div>
+
+{% endblock %}

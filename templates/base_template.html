@@ -1,4 +1,6 @@
 {% load static %}
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,20 +8,33 @@
 </head>
 <body>
 
-<div class="wrapper">
     {% include 'header.html' %}
+<!--    <div class="wrapper">-->
+    <aside>
+        {% include 'sidebar.html' %}
+    </aside>
+<!--    <div class="container">-->
 
-    {% include 'sidebar.html' %}
+<!--    <div class="content-bar" id="content">-->
+<div class="main-area">
 
-    <div class="content-bar" id="content">
     {% block content %}
 
 
     {% endblock content %} <!--Content Space-->
-    <!--If we want to use this block content, we have to use views.py-->
-    </div>
+
+
 
 </div>
+    <!--If we want to use this block content, we have to use views.py-->
+<!--    </div>-->
+
+<!--    </div>-->
+
+
+{% include 'footer.html' %}
+
+
 <!-- jQuery CDN - Slim version (=without AJAX) -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -44,9 +59,14 @@
 
 </script>
 
+
+
+<!--<div id="basement"> &lt;!&ndash;Empty space for set footer layout&ndash;&gt;-->
+<!--</div>-->
+
+
+
+
 </body>
 
-<div id="basement"> <!--Empty space for set footer layout-->
-</div>
-{% include 'footer.html' %}
 </html>
