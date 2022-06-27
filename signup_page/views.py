@@ -24,10 +24,3 @@ def signup(request):
         except:
             signup_form = UserCreateForm()
     return render(request, 'signup_page/index.html', {'signup_form': signup_form})
-
-def signup_pageHome(request):
-    return render(request, 'signup_page/index.html')
-
-def login_page(request):
-    return render(request, 'login_page/index.html')
-
