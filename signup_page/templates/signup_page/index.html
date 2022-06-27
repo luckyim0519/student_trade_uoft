@@ -14,30 +14,22 @@
 <body>
 <div class="container-signup100">
     <div class="wrap-signup">
-            <form class="form-horizontal" id="validateForm">
+        <div class="form-horizontal" id="validateForm">
         <h1 class="h1-title p-b-26">Welcome To UTST</h1>
         <fieldset>
-            <form method="POST" action="">
-                {% csrf_token %}
+            <form method="post">
+                {% csrf_token %} <!-- for the forgery protection -->
                 <div class="sign-up-field">
-<!--                    <label for="username-label"><b>Username: </b></label>-->
                     <input class="input100" type="text" placeholder="Enter your preferred UserName" name="username" required><br>
-<!--                    <label for="email"><b>UofT email: </b></label>-->
                     <input class="input100" type="email" placeholder="Enter your UofT email" name="email" required><br>
-<!--                    <label for="password"><b>password: </b></label>-->
                     <input class="input100" type="password" placeholder="Enter the password" name="password" required><br>
-<!--                    <label for="password"><b>password check: </b></label>-->
                     <input class="input100 m-b-30" type="password" placeholder="Enter the password again" name="password_check" required style="margin-bottom: 25px">
                 </div>
                 <button type="submit"><b>Create My Account</b></button>
-
-
                 <p class="signup-message">Already have an account?<a href="{% url 'login_page' %}" style="margin-left: 10px">Log in</a></p>
             </form>
-            <!-- TEST -->
-
         </fieldset>
-    </form>
+        </div>
 
     </div>
 
