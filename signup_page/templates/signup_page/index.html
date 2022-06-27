@@ -14,10 +14,11 @@
 <body>
 <div class="container-signup100">
     <div class="wrap-signup">
+        <div class="form-horizontal" id="validateForm">
         <h1 class="h1-title p-b-26">Welcome To UTST</h1>
         <!--
         <fieldset>
-            <form method="POST" action="">
+            <form method="post">
                 {% csrf_token %}
                 <div class="sign-up-field">
                     <input class="input100" type="text" placeholder="Enter your preferred UserName" name="username" required><br>
@@ -31,7 +32,7 @@
         </fieldset>
         -->
         <!-- TEST -->
-    <div >
+    <div>
         <h1>회원가입</h1>
         <form method="POST" action="{% url 'signup' %}">
             {% csrf_token %}
@@ -39,6 +40,8 @@
             <div><button type="submit", value="save"> Register </button></div>
         </form>
     </div>
+        </div>
+
     </div>
 
 </div>
