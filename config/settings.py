@@ -16,9 +16,9 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     #manually created app
     'default_page',
+    'main_page',
     'login_page',
     'signup_page',
-    'main_page',
     'category_tickets_page',
     'category_stationaries_page',
     'category_sports_page',

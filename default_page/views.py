@@ -38,4 +38,4 @@ def login_page_views(request):
     return render(request, 'login_page/index.html')
 
 def signup_views(request):
-    return render(request, 'signup_page/index.html')
+    return render(request, 'account/index.html')

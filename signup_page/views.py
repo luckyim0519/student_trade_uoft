@@ -5,6 +5,7 @@ from django.shortcuts import render, redirect
 
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
+from django.contrib.auth import authenticate,login,logout
 
 from .forms import UserCreateForm
 
@@ -29,5 +30,6 @@ def signup(request):
     else:
         signup_form = UserCreateForm()
 
-
     return render(request, 'signup_page/index.html', {'signup_form': signup_form})
+
+
