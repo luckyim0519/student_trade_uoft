@@ -5,9 +5,9 @@ from .models import BookBoardModel
 class BookBoardForm(forms.ModelForm):
     class Meta:
         model = BookBoardModel
-        fields =['title', 'content', 'writer']
+        fields =['title', 'content', 'writer', 'image']
         widgets = {
-            'title': forms.TextInput(attrs={'class':'form-control'}),
+            'title': forms.TextInput(attrs={'class': 'form-control'}),
             'content': forms.Textarea(attrs={'class': 'form-control'}),
             'writer': forms.TextInput(attrs={'class': 'form-control'})
         }

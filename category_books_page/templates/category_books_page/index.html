@@ -7,24 +7,16 @@
 
 {% block content %}
 
-<!--<div class="vertical-line"></div>-->
 <div class="container-category">
 
 
 {% for book in all_books %}
 
 
-<!--<div class="item">-->
-<!--   {{ forloop.counter  }}번글: {{ book.title }} - {{ post.title }}-->
-<!--   <h1>{{ book.title }}</h1>-->
-<!--   <p>{{book.content}}<a href="{% url 'detail' book.id %}">...more</a></p>-->
-<!--   <p>{{book.writer}}</p>-->
-<!--   <br>-->
-<!--</div>-->
-
    <div class="card" style="min-width: 18rem; padding: 10px; margin: 5px;">
-   {{ forloop.counter  }}번글: {{ book.title }} - {{ post.title }}
-   <img class="card-img-top" src="..." alt="Card image cap">
+   {{ forloop.counter  }}번글: {{ book.title }} - {{ book.title }}
+
+   <img src="media/{{ book.image }}" alt="Card image cap" >
       <div class="card-body">
          <h5 class="card-title">{{ book.title }}</h5>
          <h6 class="card-subtitle mb-2 text-muted">{{ book.writer }}</h6>

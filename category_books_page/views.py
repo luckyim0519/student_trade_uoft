@@ -5,6 +5,8 @@ from django.views.decorators.csrf import csrf_exempt
 from .models import BookBoardModel
 from .forms import BookBoardForm
 
+
+# This is a problem when call image source
 def index(request):
     #-id means the most recent post is posted first
     all_books = BookBoardModel.objects.all().order_by('-id')
@@ -26,7 +28,7 @@ def detail(request, id):
 @csrf_exempt
 def post(request):
     if request.method == 'POST':
-        postform = BookBoardForm(request.POST)
+        postform = BookBoardForm(request.POST, request.FILES)
         if postform.is_valid():
             postform.save()
         return redirect('/category_books_page/')
