@@ -7,8 +7,8 @@ from django.conf import settings
 
 
 urlpatterns = [
-    path('', views.index, name='bookHome'),
-    path('detail/<int:id>', views.detail, name="detail"),
+    path('', views.index, name='index'),
+    path('detail/<int:id>/', views.detail, name="detail"),
     path('post/', views.post, name="post"),
 ]
 

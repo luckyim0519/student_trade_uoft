@@ -24,6 +24,13 @@ def detail(request, id):
     context = {'book_detail': book_detail}
     return render(request, 'category_books_page/detail.html', context)
 
+def update(request, id):
+    update_detail = get_object_or_404(BookBoardModel, pk=id)
+    if request.method == "POST":
+        book_form = BookBoardForm(request.POST, request.FILES, instance=update_detail)
+        if book_form.is_valid():
+            book_form.save()
+            return redirect('category_books_page:detail', update_detail.id )
 
 @csrf_exempt
 def post(request):
@@ -31,8 +38,7 @@ def post(request):
         postform = BookBoardForm(request.POST, request.FILES)
         if postform.is_valid():
             postform.save()
-        return redirect('/category_books_page/')
+            return redirect('/category_books_page/detail/{}', )
     else:
         postform = BookBoardForm()
-
     return render(request, 'category_books_page/post.html', {'postform': postform})

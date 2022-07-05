@@ -1,1 +1,13 @@
-<h1>{{book_detail.content}}</h1>
+
+
+
+{{book_detail.content}}
+
+   <div class="card" style="min-width: 18rem; padding: 10px; margin: 5px;">
+   <img src="media/{{ book_detail.image }}" alt="Card image cap" style="max-width: 300px; max-height: 300px; padding: 10px; margin: 5px;" >
+      <div class="card-body">
+         <h5 class="card-title">{{ book_detail.title }}</h5>
+         <h6 class="card-subtitle mb-2 text-muted">{{ book_detail.writer }}</h6>
+         <p class="card-text">{{ book_detail.content }}</p>
+      </div>
+   </div>

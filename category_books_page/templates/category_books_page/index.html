@@ -14,9 +14,7 @@
 
 
    <div class="card" style="min-width: 18rem; padding: 10px; margin: 5px;">
-   {{ forloop.counter  }}번글: {{ book.title }} - {{ book.title }}
-
-   <img src="media/{{ book.image }}" alt="Card image cap" >
+   <img src="media/{{ book.image }}" alt="Card image cap" style="max-width: 300px; max-height: 300px; padding: 10px; margin: 5px;" >
       <div class="card-body">
          <h5 class="card-title">{{ book.title }}</h5>
          <h6 class="card-subtitle mb-2 text-muted">{{ book.writer }}</h6>
@@ -25,11 +23,6 @@
    </div>
 
 {% endfor %}
-
-
-   <div class="item">
-
-   </div>
 
    <div class="floating-button">
       <a class="post-btn" href="{% url 'post' %}">
