@@ -12,13 +12,12 @@ def post_image_path(instance, filename):
 class BookBoardModel(models.Model):
     title = models.CharField(max_length=30, null=False)
     content = models.TextField()
-    #to be updated after the sign up page
-
     pub_date= models.DateTimeField('date published', null=True)
+    # to be updated after the sign up page
     writer = models.CharField(max_length=20, null=True)
     image = ProcessedImageField(
-        null = True,
-        blank = True,
+        null=True,
+        blank=True,
         upload_to=post_image_path,
         processors=[ResizeToFill(300, 300)],
         format='JPEG',
