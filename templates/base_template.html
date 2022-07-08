@@ -13,27 +13,14 @@
     <aside>
         {% include 'sidebar.html' %}
     </aside>
-<!--    <div class="container">-->
 
-<!--    <div class="content-bar" id="content">-->
-<div class="main-area">
+        {% block content %}
+<!--Content Space-->
+        {% endblock content %}
 
-    {% block content %}
-
-
-    {% endblock content %} <!--Content Space-->
-
-
-
-</div>
     <!--If we want to use this block content, we have to use views.py-->
-<!--    </div>-->
-
-<!--    </div>-->
-
 
 {% include 'footer.html' %}
-
 
 <!-- jQuery CDN - Slim version (=without AJAX) -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -49,6 +36,7 @@
         crossorigin="anonymous"></script>
 
 <script type="text/javascript">
+
     $(document).ready(function () {
 
         $('#sidebarCollapse').on('click', function () {

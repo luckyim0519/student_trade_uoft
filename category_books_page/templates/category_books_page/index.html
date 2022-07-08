@@ -7,12 +7,13 @@
 
 {% block content %}
 
-<div class="container-category">
+
+<div class="main-area">
+
+   <div class="container-category">
 
 
 {% for book in all_books %}
-
-
    <div class="card" style="min-width: 18rem; padding: 10px; margin: 5px;">
    <img src="media/{{ book.image }}" alt="Card image cap" style="max-width: 300px; max-height: 300px; padding: 10px; margin: 5px;" >
       <div class="card-body">
@@ -29,6 +30,10 @@
       <input class="span-post-button" type="button" value="+"/>
       </a>
    </div>
+
+</div>
+
+
 
 <script>
     <!--Disable Searchbar on Default Page-->

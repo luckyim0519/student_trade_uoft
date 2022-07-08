@@ -114,9 +114,10 @@ footer {
     /*transform: translateY(-100%);*/
 }
 
-/*Searchbar Input for Default Page*/
+
 #searchbar-input-default {
-    width: 80%;
+    width: 60%;
+    min-width: 404px;
 }
 
 p {
@@ -232,7 +233,7 @@ border: 1px solid blue;
 /* Relates to Sidebar */
 aside {
     /*padding-top: 112px;*/
-    margin-top: 112px;
+    margin-top: 56px;
     position: fixed;
     z-index: 5;
 }
@@ -241,7 +242,7 @@ aside {
     /*padding-top: 112px;*/
     min-width: 250px;
     max-width: 250px;
-    margin-left: -250px;
+    /*margin-left: -250px;*/
     /*margin-top: 112px;*/
     border: darkblue;
     /*background: #FFFFFF;*/
@@ -396,11 +397,11 @@ footer h6 {
 @media (max-width: 414px) {
 
     #sidebar {
-        margin-left: 0;
+        margin-left: -250px;
     }
 
     #sidebar.active {
-        margin-left: -250px;
+        margin-left: 0;
     }
 
     #searchbar-input-default {
@@ -427,11 +428,11 @@ footer h6 {
 /*For Tablet*/
 @media (max-width: 768px) {
     #sidebar {
-        margin-left: 0;
+        margin-left: -250px;
     }
 
     #sidebar.active {
-        margin-left: -250px;
+        margin-left: 0;
     }
 
     #searchbar-input-default {
@@ -445,16 +446,42 @@ footer h6 {
     }
 
 }
+@media (min-width: 768px) {
+        #sidebar {
+        margin-left: -250px;
+    }
 
+    #sidebar.active {
+        margin-left: 0;
+    }
 
+}
+
+@media (min-width: 404px) {
+        #sidebar {
+        margin-left: -250px;
+    }
+
+    #sidebar.active {
+        margin-left: 0;
+    }
+
+}
 
 /*For Desktop*/
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
 
     /*.global-header {*/
     /*    grid-area: header;*/
     /*    display: grid;*/
     /*}*/
+    #sidebar {
+        margin-left: -250px;
+    }
+
+    #sidebar.active {
+        margin-left: 0;
+    }
 
     #searchbar-input-default {
         width: 800px;
